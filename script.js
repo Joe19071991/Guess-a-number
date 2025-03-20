@@ -1,10 +1,12 @@
 const getNumber = () => {
-  let givenNumber = parseFloat(prompt("Rentrez un chiffre"));
-  if (isNaN(givenNumber)) {
+  let givenNumber = prompt("Rentrez un chiffre");
+  let inputValue = parseFloat(givenNumber);
+
+  if (isNaN(inputValue)) {
     alert("Veuillez rentrer un chiffre valide");
     return getNumber();
   }
-  return givenNumber;
+  return inputValue;
 };
 
 // console.log(`le chiffre rentrez est : ` + getNumber());
