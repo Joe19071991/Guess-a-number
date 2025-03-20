@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guess a number</title>
+    <title>Jeu de Devinettes</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <h1>Jeu de Devinettes</h1>
+    <div id="game">
+      <p>Range actuel : <span id="range">0 et 50</span></p>
+      <input
+        type="number"
+        id="guessInput"
+        placeholder="Entrez votre proposition"
+      />
+      <button onclick="makeGuess()">Valider</button>
+      <p id="attempts">Tentatives : 0</p>
+      <p id="message"></p>
+    </div>
+  </body>
 </html>
