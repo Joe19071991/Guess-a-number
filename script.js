@@ -10,4 +10,25 @@ const getNumber = () => {
 };
 
 // console.log(`le chiffre rentrez est : ` + getNumber());
-let givenNumber = getNumber();
+
+const didIWin = (givenNumber) => {
+  const numberToGuess = 22;
+  if (givenNumber < numberToGuess) {
+    alert("Plus grand");
+    gamePlay();
+  } else if (givenNumber > numberToGuess) {
+    alert("Plus petit");
+    gamePlay();
+  }
+  alert("Bavo ! Vous avez deviné le chiffre !");
+  return true;
+};
+
+// console.log(didIWin(22));
+
+const gamePlay = () => {
+  let givenNumber = getNumber();
+  didIWin(givenNumber);
+};
+
+gamePlay();
